@@ -419,12 +419,12 @@ main {
   color: var(--light-gray-70);
   font-size: 25px;
   margin : 0px 3px 0px 3px;
-  transition : 0.2s ease ;
+  transition : transform 0.2s ease ;
 }
 
 
 .social-item .social-link:hover {  
-  scale : 1.385;
+  transform : scale(1.385);
 }
 
 
@@ -500,12 +500,12 @@ main {
   text-decoration: none;
   font-weight: 500;
   font-size: 18px;
-  transition: background 0.2s, scale 0.2s ease;
+  transition: background 0.2s, transform 0.2s ease;
   box-shadow: var(--shadow-2);
 }
 .resume-download-btn:hover {
   background: var(--border-gradient-onyx);
-  scale : 1.035;
+  transform: scale(1.035);
 }
 .resume-download-btn ion-icon {
   font-size: 1.2em;
