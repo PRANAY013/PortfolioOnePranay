@@ -309,8 +309,14 @@ main {
 }
 
 .avatar-box {
+  width: 80px;
+  height: 80px;
   background: var(--bg-gradient-onyx);
   border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .avatar-box {
