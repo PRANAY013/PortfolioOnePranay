@@ -1,0 +1,242 @@
+vCard - Personal Portfolio
+
+# sidebar
+
+alt = Pranay Pandey
+Pranay Pandey
+Computer Science Engineering Student
+Delhi Technological University
+
+Show Contacts
+
+Email
+pranaypandey2005@gmail.com
+
+Phone
++91 xxxxxxxxxx
+
+Birthday
+10th August 2005
+
+Location
+Delhi NCT, India
+
+# navbar
+
+About
+Resume
+Portfolio
+Blog
+Contact
+
+# about
+
+About me
+
+Hi! I'm Pranay, an ardent learner and Computer Science Engineering student at Delhi Technological University.
+
+Whether it's mastering DSA with Java, diving into Machine Learning, building Full-Stack MERN web apps, or exploring System Design, I thrive on pushing boundaries.
+
+An inherent characteristic of mine is a deep intolerance for stagnation. I actively seek out challenges to enhance my skills and practical knowledge. I'm driven to seek innovation and push for continual progress in everything I do.
+
+Technical Proficiencies:
+
+ - Core Programming Skills: Java, C++ , Python
+ - Database Technologies: MongoDB, MySQL, Redis, Neo4j
+ - Machine Learning: Pandas, NumPy, SciKit-Learn, PyTorch, TensorFlow (Keras), OpenCV
+ - Advanced AI Tools: Hugging Face Transformers, LangChain, GPT-Neo, StyleGAN
+ - Web Development: HTML, CSS, JavaScript, Bootstrap, React, Node.js, Express.js, GraphQL
+
+CS Fundamentals:
+
+Computer Networks, Operating Systems, Computer Architecture and Organization, Object-Oriented Programming Systems, Database Management
+
+Skills:
+
+ - Technical Tools: MS Office (Intermediate) and Power BI
+ - Soft Skills: Communication, Presentation, Negotiation, Critical Thinking, Time Management
+ - Leadership & Collaboration: Project Management, Conflict Resolution, Strategic Planning
+
+Beyond that, I'm an aesthete. When I’m not programming, you’ll find me immersed in philosophy, literature, music, or playing classics on the piano.
+
+
+## service
+
+What i'm doing
+
+alt = design icon
+Web design
+Modern, responsive, and visually appealing web design tailored for usability and aesthetics.
+
+alt = Web development icon
+Web development
+Full-stack development of scalable web applications using the MERN stack and modern frameworks.
+
+alt = mobile app icon
+Machine Learning & AI
+Building intelligent solutions with Python, PyTorch, TensorFlow, and advanced AI tools.
+
+alt = database icon
+Database Engineering
+Designing and managing robust databases: MongoDB, MySQL, Redis, Neo4j.
+
+
+## testimonials
+
+Testimonials
+
+alt = Daniel lewis
+Daniel lewis
+Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+
+alt = Jessica miller
+Jessica miller
+Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+
+alt = Emily evans
+Emily evans
+Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+
+alt = Henry william
+Henry william
+Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+
+
+## clients
+
+Clients
+
+alt = client logo
+
+
+
+# resume
+
+Resume
+
+Education
+
+Delhi Technological University
+2023 — Present
+B.Tech in Computer Science Engineering
+
+Experience
+
+Full Stack Developer (Intern)
+2023 — 2024
+Developed and maintained MERN stack web applications, collaborated with cross-functional teams, and optimized database performance.
+
+Machine Learning Intern
+2022 — 2023
+Worked on machine learning models using Python, PyTorch, and TensorFlow; contributed to AI-driven projects.
+
+My skills
+
+Java
+90%
+Python
+85%
+C++
+80%
+MongoDB
+80%
+React
+75%
+Node.js
+75%
+
+# portfolio
+
+Portfolio
+
+Select category
+All
+Web design
+Applications
+Web development
+
+alt = project-1
+Personal Portfolio Website
+Web development
+A responsive portfolio website built with React, Node.js, and Express.js to showcase my projects and skills.
+
+alt = project-2
+MERN Social Network
+Web development
+A full-stack social networking platform using MongoDB, Express.js, React, and Node.js with real-time chat and notifications.
+
+alt = project-3
+AI Image Generator
+Applications
+A web app that generates images from text prompts using Hugging Face Transformers and StyleGAN.
+
+alt = project-4
+Task Manager App
+Applications
+A productivity app for task management, built with React and Node.js, featuring user authentication and analytics.
+
+alt = project-5
+E-commerce Dashboard
+Web design
+An admin dashboard for e-commerce analytics, built with React, Chart.js, and Bootstrap.
+
+alt = project-6
+Blog Platform
+Web development
+A blogging platform with Markdown support, built using MERN stack and GraphQL.
+
+
+
+# blog
+
+Blog
+
+alt = Design conferences in 2022
+Design
+Fab 23, 2022
+Design conferences in 2022
+Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+
+alt = Best fonts every designer
+Design
+Fab 23, 2022
+Best fonts every designer
+Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
+
+alt = Design digest #80
+Design
+Fab 23, 2022
+Design digest #80
+Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
+
+alt = UI interactions of the week
+Design
+Fab 23, 2022
+UI interactions of the week
+Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
+
+alt = The forgotten art of spacing
+Design
+Fab 23, 2022
+The Forgotten Art Of Spacing
+Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+alt = Design digest #79
+Design
+Fab 23, 2022
+Design Digest #79
+Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
+
+
+
+# contact
+
+Contact
+
+Contact Form
+
+Full name
+Email address
+Your Message
+
+Send Message
