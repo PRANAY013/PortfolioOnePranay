@@ -273,8 +273,6 @@ article.active {
 
 
 
-
-
 /*-----------------------------------*\
   #MAIN
 \*-----------------------------------*/
@@ -410,7 +408,7 @@ main {
 
 .social-list {
   display: flex;
-  justify-content: flex-start;
+  justify-content:center ;
   align-items: center;
   gap: 15px;
   padding-bottom: 4px;
@@ -419,11 +417,15 @@ main {
 
 .social-item .social-link {
   color: var(--light-gray-70);
-  font-size: 18px;
+  font-size: 25px;
+  margin : 0px 3px 0px 3px;
+  transition : 0.2s ease ;
 }
 
 
-.social-item .social-link:hover { color: var(--light-gray); }
+.social-item .social-link:hover {  
+  scale : 1.385;
+}
 
 
 
@@ -485,7 +487,29 @@ main {
 
 .about-text p { margin-bottom: 15px; }
 
-
+.resume-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5em 1em;
+  background: var(--smoky-black);
+  color: var(--orange-yellow-crayola);
+  border-radius: 16px;
+  border-color : var(--orange-yellow-crayola);
+  border-style: solid;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  transition: background 0.2s, scale 0.2s ease;
+  box-shadow: var(--shadow-2);
+}
+.resume-download-btn:hover {
+  background: var(--border-gradient-onyx);
+  scale : 1.035;
+}
+.resume-download-btn ion-icon {
+  font-size: 1.2em;
+}
 
 /**
  * #service 
@@ -508,6 +532,12 @@ main {
   border-radius: 14px;
   box-shadow: var(--shadow-2);
   z-index: 1;
+  transition: 0.15s ease;
+}
+
+.service-item:hover {
+  background: var(--smoky-black);
+  scale : 1.035;
 }
 
 .service-item::before {
@@ -734,8 +764,6 @@ main {
 }
 
 .clients-item img:hover { filter: grayscale(0); }
-
-
 
 
 
