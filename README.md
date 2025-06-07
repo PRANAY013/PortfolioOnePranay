@@ -10,6 +10,8 @@ A modern, responsive personal portfolio website for Pranay Pandey, a Computer Sc
 - **Blog:** Sample blog posts.
 - **Contact:** Contact form and embedded Google Map centered on Delhi, India.
 - **Responsive Design:** Works well on desktop and mobile devices.
+- **Light/Dark Mode:** Toggle between dark and light themes.
+- **Custom Cursor:** Bouncy accent-colored cursor with inertial trail on desktop.
 
 ## Technologies Used
 
@@ -19,6 +21,7 @@ A modern, responsive personal portfolio website for Pranay Pandey, a Computer Sc
 - [Ionicons](https://ionic.io/ionicons) for icons
 - Google Fonts (Poppins)
 - Google Maps Embed
+- [Formsubmit](https://formsubmit.co/) for contact form email integration
 
 ## Getting Started
 
@@ -37,11 +40,12 @@ No build tools or dependencies required.
 - Update your personal details in `index.html` (sidebar, about, resume, etc.).
 - Add or replace project images in `assets/images/`.
 - Edit styles in `assets/css/style.css` as needed.
+- Update testimonials and integrate your real projects in the Portfolio section.
 
 ## Folder Structure
 
 ```
-PortfolioOneTest/
+PortfolioOnePranay/
 ├── assets/
 │   ├── css/
 │   │   └── style.css
@@ -49,8 +53,14 @@ PortfolioOneTest/
 │   └── js/
 │       └── script.js
 ├── index.html
+├── resumepranay_june2025.pdf
 └── README.md
 ```
+
+## TODO
+
+- [ ] Update testimonials section with feedback.
+- [ ] Integrate projects and details in the Portfolio article.
 
 ## License
 
