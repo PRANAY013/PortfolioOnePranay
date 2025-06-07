@@ -157,3 +157,72 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+
+// Bouncy Cursor with Inertial Trail
+(function() {
+  if (window.innerWidth > 1250) {
+    document.body.style.cursor = 'none';
+
+    const dot = document.createElement('div');
+    dot.className = 'bouncy-cursor-dot';
+    document.body.appendChild(dot);
+
+    const trail = document.createElement('div');
+    trail.className = 'bouncy-cursor-trail';
+    document.body.appendChild(trail);
+
+    const map = document.querySelector('.mapbox');
+    if (map) {
+      map.addEventListener('mouseenter', () => {
+        dot.style.display = 'none';
+        trail.style.display = 'none';
+        document.body.style.cursor = '';
+      });
+      map.addEventListener('mouseleave', () => {
+        dot.style.display = '';
+        trail.style.display = '';
+        document.body.style.cursor = 'none';
+      });
+    }
+
+    let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+    let dotX = mouseX, dotY = mouseY;
+    let trailX = mouseX, trailY = mouseY;
+
+    document.addEventListener('mousemove', e => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      dot.style.opacity = '1';
+      trail.style.opacity = '1';
+    });
+
+    function animate() {
+      dotX += (mouseX - dotX) * 0.155;
+      dotY += (mouseY - dotY) * 0.155;
+      dot.style.left = dotX + 'px';
+      dot.style.top = dotY + 'px';
+
+      trailX += (dotX - trailX) * 0.115;
+      trailY += (dotY - trailY) * 0.115;
+      trail.style.left = trailX + 'px';
+      trail.style.top = trailY + 'px';
+
+      requestAnimationFrame(animate);
+    }
+    animate();
+
+    document.body.style.cursor = 'none';
+
+    document.addEventListener('mouseleave', () => {
+      dot.style.opacity = '0';
+      trail.style.opacity = '0';
+    });
+    document.addEventListener('mouseenter', () => {
+      dot.style.opacity = '1';
+      trail.style.opacity = '1';
+    });
+  } else {
+    document.body.style.cursor = '';
+  }
+})();

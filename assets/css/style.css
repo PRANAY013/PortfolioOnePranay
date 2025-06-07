@@ -1930,3 +1930,46 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+
+/* Custom bouncy cursor */
+.bouncy-cursor-dot, .bouncy-cursor-trail {
+  position: fixed;
+  pointer-events: none;
+  z-index: 2147483647;
+  border-radius: 50%;
+  transition: background 0.125s;
+  mix-blend-mode: difference;
+}
+
+.bouncy-cursor-dot {
+  width: 15px;
+  height: 15px;
+  background: var(--orange-yellow-crayola);
+  box-shadow: 0 0 10px 2px var(--orange-yellow-crayola);
+  transform: translate(-50%, -50%);
+}
+
+.bouncy-cursor-trail {
+  width: 32px;
+  height: 32px;
+  background: var(--orange-yellow-crayola);
+  opacity: 0.125;
+  filter: blur(6px);
+  transform: translate(-50%, -50%);
+  transition: opacity 0.125s;
+}
+
+@media (max-width: 1250px) {
+  .bouncy-cursor-dot, .bouncy-cursor-trail {
+    display: none;
+  }
+}
+
+.mapbox:hover ~ .bouncy-cursor-dot,
+.mapbox:hover ~ .bouncy-cursor-trail {
+  display: none !important;
+}
+.mapbox:hover {
+  cursor: auto !important;
+}
