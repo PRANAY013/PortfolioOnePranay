@@ -152,6 +152,7 @@ article {
   padding: 15px;
   box-shadow: var(--shadow-1);
   z-index: 1;
+  transition: var(--transition-2);
 }
 
 .separator {
@@ -1376,7 +1377,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   .sidebar {
-    max-height: 180px;
+    max-height: 150px;
     margin-bottom: 30px;
   }
 
@@ -1612,6 +1613,9 @@ textarea.form-input::-webkit-resizer { display: none; }
    * SIDEBAR
    */
 
+  .sidebar {
+    max-height: 180px;
+  }
   .contacts-list {
     grid-template-columns: 1fr 1fr;
     gap: 20px 15px;
