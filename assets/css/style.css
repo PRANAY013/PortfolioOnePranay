@@ -1915,7 +1915,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .separator:last-of-type {
-    margin: 15px 0;
+    margin: 25px 0;
   }
 
   .social-list { justify-content: center; }
