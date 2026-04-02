@@ -225,3 +225,77 @@ for (let i = 0; i < navigationLinks.length; i++) {
     document.body.style.cursor = '';
   }
 })();
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.testimonials-list');
+  if (!track) return;
+
+  // 1. Decoupled Memory Variables
+  let velocity = 0;
+  let exactScroll = track.scrollLeft; // Stores the true sub-pixel position
+  let isAnimating = false;
+  
+  // 2. Engine Tuning
+  const friction = 0.50; // 0.90 to 0.98. Higher = longer glide.
+  const multiplier = 0.25; // Sensitivity.
+
+  // 3. The Execution Loop
+  function renderMomentum() {
+    if (Math.abs(velocity) < 0.1) {
+      velocity = 0;
+      isAnimating = false;
+      return;
+    }
+
+    // Calculate true position in memory
+    exactScroll += velocity;
+    velocity *= friction;
+
+    // Clamp absolute boundaries mathematically
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    if (exactScroll <= 0) {
+      exactScroll = 0;
+      velocity = 0;
+    } else if (exactScroll >= maxScroll) {
+      exactScroll = maxScroll;
+      velocity = 0;
+    }
+
+    // Force DOM to sync
+    track.scrollLeft = exactScroll;
+
+    requestAnimationFrame(renderMomentum);
+  }
+
+  // 4. Input Interceptor
+  track.addEventListener('wheel', (e) => {
+    const maxScroll = track.scrollWidth - track.clientWidth;
+
+    // Yield control to vertical window scrolling at the absolute edges
+    if ((exactScroll <= 0 && e.deltaY < 0) || (exactScroll >= maxScroll && e.deltaY > 0)) {
+      return; 
+    }
+
+    e.preventDefault();
+
+    velocity += e.deltaY * multiplier;
+
+    if (!isAnimating) {
+      isAnimating = true;
+      // Resync starting position in case user manually dragged the trackpad
+      exactScroll = track.scrollLeft; 
+      requestAnimationFrame(renderMomentum);
+    }
+  }, { passive: false });
+
+  // 5. State Synchronization
+  // Keeps the memory variable accurate if the user uses native touch swiping
+  track.addEventListener('scroll', () => {
+    if (!isAnimating) {
+      exactScroll = track.scrollLeft;
+    }
+  }, { passive: true });
+});

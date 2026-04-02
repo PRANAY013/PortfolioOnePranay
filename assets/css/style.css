@@ -195,6 +195,8 @@ article.active {
   animation: fade 0.5s ease backwards;
 }
 
+
+
 @keyframes fade {
   0% { opacity: 0; }
   100% { opacity: 1; }
@@ -643,6 +645,24 @@ main {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+
+
+.testimonials-list {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth; 
+  padding-bottom: 20px;
+
+  -webkit-mask-image: linear-gradient(to right, transparent, rgb(30, 30, 30) 15%, black 85%, transparent);
+  mask-image: linear-gradient(to right, transparent, rgb(30, 30, 30) 15%, black 85%, transparent);
+}
+
+.testimonials-item {
+  flex: 0 0 auto;
+  width: 320px;
 }
 
 
