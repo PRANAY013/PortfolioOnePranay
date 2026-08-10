@@ -12,7 +12,17 @@ const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
 // sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
+sidebarBtn.addEventListener("click", function () {
+  elementToggleFunc(sidebar);
+  
+  // Toggle the button text
+  const btnText = this.querySelector("span");
+  if (sidebar.classList.contains("active")) {
+    btnText.textContent = "Hide Contacts";
+  } else {
+    btnText.textContent = "Show Contacts";
+  }
+});
 
 
 
