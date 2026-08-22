@@ -216,7 +216,7 @@
         </ul>
         <ul style="display: flex; justify-content: center; padding-top: 15px; padding-bottom:15px ;">
           <li>
-            <a href="./PranayPandey_Resume_Aug2026.pdf" download class="resume-download-btn">
+            <a href="./PranayPandey_Resume_Aug2026_aegisplus.pdf" download class="resume-download-btn">
             <ion-icon name="download-outline"></ion-icon>
             <span style="font-size: 13px;">Download Resume</span>
             </a>
@@ -308,7 +308,7 @@
             Beyond the Terminal, you’ll find me immersed in literature, music, or playing classics on the piano.
           </p>
           <p>
-            <a href="./PranayPandey_Resume_Aug2026.pdf" download class="resume-download-btn">
+            <a href="./PranayPandey_Resume_Aug2026_aegisplus.pdf" download class="resume-download-btn">
               <ion-icon name="download-outline"></ion-icon>
               <span>Download Resume</span>
             </a>
@@ -725,7 +725,7 @@
                 - Architected a GEPA-inspired, feedback-based prompt optimization loop for the MAS LIPI agent, integrating deterministic evaluation gates and LLM-driven candidate generation, elevating the system pass rate from 76% to 87% across 628 test scenarios with zero runtime overhead.<br>
                 - Orchestrated rigorous LLM telemetry via Langfuse and Jenkins CI/CD pipelines. Benchmarked GPT-5.2 against 5.4, 5.4-mini (low/med/high reasoning), 5.4-nano, GPT-5-mini, o3, 4o-mini, and o4-mini. Proved GPT-5.4-mini (low reasoning) achieved a 57.5% operational cost reduction over the 2.35x more expensive GPT-5.2 baseline while sustaining a 97.0% deterministic-set pass rate.<br>
                 - Engineered Meta Harness Skill-Centric (MHSC), an autonomous, agent-agnostic, multi-surface harness optimization framework inspired by Stanford’s Meta-Harness and the Ralph Loop; evolved its Claude-Skill architecture across Adobe’s MAS stack (Halo, LIPI, Rules) to automate prompting guide-driven edits, iterative benchmarking, and reducing ~3 weeks of manual LLM model migration to an overnight run.<br>
-                - Deployed MHSC as a zero-overhead execution pipeline requiring only target endpoints and API keys to perform agent discovery, self-evaluation, and automated PR generation. MHSC Early Wins reduced per-scenario token consumption by 12.33% in LIPI and 27.0% in Halo.<br>
+                - Deployed MHSC as a zero-overhead execution pipeline requiring only target endpoints and API keys to perform agent discovery, self-evaluation, and automated PR generation; MHSC reduced per-scenario token consumption by 12.33% in LIPI and 27.0% in Halo.<br>
               </p>
             </li>
 
@@ -733,9 +733,9 @@
               <h4 class="h4 timeline-item-title">Machine Learning Intern @ Defence Research and Development Organisation (DRDO)</h4>
               <span>Jun 2025 — Jul 2025</span>
               <p class="timeline-text">
-                <em>Technologies: Python, Pandas, NumPy, NLTK, Scikit-learn, Node2Vec, K-Means, Fuzzy C-Means, FuzzyWuzzy, FastAPI, SQLite, Tortoise ORM</em><br>
-                - Created a high-throughput Python Microservice for entity recommendation using FastAPI, SQLite, and Tortoise ORM; delivered standards-driven RESTful APIs across a microservice architecture with 100% deployment success and zero production rollbacks.<br>
-                - Architected a hybrid recommendation engine combining K-Means, Fuzzy C-Means, Node2Vec graph embeddings, and TF-IDF-enhanced fuzzy matching—achieving sub-second NLP retrieval with a 530ms average response time in high-volume environments.<br>
+                <em>Technologies: Python, Pandas, NumPy, RapidFuzz, Scikit-learn, Node2Vec, Fuzzy C-Means, NLTK, FastAPI, Docker, Pytest</em><br>
+                - Architected a scalable, hybrid candidate-matching microservice utilizing Fuzzy C-Means, Node2Vec embeddings, and TF-IDF; slashed matrix generation from ~1hr to 9.79s while maintaining 83.6% Top-1 accuracy by integrating C++ RapidFuzz and resolving N-gram boundaries.<br>
+                - Engineered a fully vectorized NumPy scoring pipeline processing 200,000 multi-dimensional matches in 0.90s (>325,000 pairs/sec); hardened the system using O(1) disk-caching for near-zero latency warm boots and a secure, rootless Docker containerization pipeline.<br>
               </p>
             </li>
             <li class="timeline-item">
@@ -1019,9 +1019,9 @@
                 <h3 class="project-title">AEGIS — Agent Efficiency, Graph-Intelligence & Scoring</h3>
                 <p class="project-category">Machine Learning, System Design</p>
                 <p class="project-description">
-                  Technologies: Python, SQLite, Node2Vec, NumPy, Sentence-Transformers, LLM Orchestration <br><br>
-                  - Engineered AEGIS, a local-first infrastructure designed to optimize LLM agent architectures by mining execution traces as offline graphs. Developed a 6-module system featuring a centralized trace store, an AgentGate runtime gateway, and a TraceGraph miner to predict cache-safe requests and redundant tool-calls without generative LLM overhead.<br>
-                  - Architected a robust evaluation suite comprising a deterministic replay mechanism, a shadow policy engine, and a distilled CPU judge. This framework enables rigorous benchmarking of agent modifications against baseline behaviors while maintaining high reliability and fail-open execution constraints.<br>
+                  Technologies: Python, FastAPI, Redis, SQLite, Sentence-Transformers, NetworkX, Node2Vec, Ollama, vLLM <br><br>
+                  - Created a zero-runtime-LLM gateway delivering exact-match and verifier-gated semantic caching, heuristic cascade routing, and shadow-mode policy staging, powered entirely by dense local embeddings, graph-based ANN retrieval, and zero-cost inference via Ollama & vLLM.<br>
+                  - Designed Trajectory-Based Prompt Enrichment with fail-closed safety gates against adversarial injection replay and cross-tenant data leakage; engineered a two-plane evaluation suite utilizing a CPU judge to statistically validate metrics via 95% bootstrap confidence intervals.<br>
                 </p>
               </a>
             </li>
@@ -1037,9 +1037,9 @@
                 <h3 class="project-title">DRDO - AI-driven Recommendation System</h3>
                 <p class="project-category">Machine Learning, System Design</p>
                 <p class="project-description">
-                  Technologies: Python, Pandas, NLTK, Scikit-learn, Node2Vec, K-Means, Fuzzy C-Means, FuzzyWuzzy, FastAPI <br><br> 
-                  - Engineered a hybrid engine with K-Means, Fuzzy C-Means, Node2Vec graph embeddings, and TF-IDF-enhanced fuzzy sets, applying robust NLP to achieve high system accuracy and 530ms average response time.<br>
-                  - Produced comprehensive documentation and standards-driven RESTful APIs, facilitating reliable integration across systems. Maintained 100% deployment success and zero rollbacks throughout the development cycle.
+                  Technologies: Python, Pandas, NumPy, RapidFuzz, Scikit-learn, Node2Vec, Fuzzy C-Means, NLTK, FastAPI, Docker, Pytest <br><br> 
+                  - Architected a scalable, hybrid candidate-matching microservice utilizing Fuzzy C-Means, Node2Vec embeddings, and TF-IDF; slashed matrix generation from ~1hr to 9.79s while maintaining 83.6% Top-1 accuracy by integrating C++ RapidFuzz and resolving N-gram boundaries.<br>
+                  - Engineered a fully vectorized NumPy scoring pipeline processing 200,000 multi-dimensional matches in 0.90s (>325,000 pairs/sec); hardened the system using O(1) disk-caching for near-zero latency warm boots and a secure, rootless Docker containerization pipeline.<br>
                 </p>
               </a>
             </li>
