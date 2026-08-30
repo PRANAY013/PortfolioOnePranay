@@ -633,10 +633,10 @@
               <span>May 2026 — Jul 2026</span>
               <p class="timeline-text">
                 <em>Technologies: Python, Scala, AWS-Bedrock Anthropic Models, Azure OpenAI Services, Langfuse, Jenkins CI/CD, Git, Jira</em><br>
-                - Architected a GEPA-inspired, feedback-based prompt optimization loop for the MAS LIPI agent, integrating deterministic evaluation gates and LLM-driven candidate generation, elevating the system pass rate from 76% to 87% across 628 test scenarios with zero runtime overhead.<br>
-                - Orchestrated rigorous LLM telemetry via Langfuse and Jenkins CI/CD pipelines. Benchmarked GPT-5.2 against 5.4, 5.4-mini (low/med/high reasoning), 5.4-nano, GPT-5-mini, o3, 4o-mini, and o4-mini. Proved GPT-5.4-mini (low reasoning) achieved a 57.5% operational cost reduction over the 2.35x more expensive GPT-5.2 baseline while sustaining a 97.0% deterministic-set pass rate.<br>
-                - Engineered Meta Harness Skill-Centric (MHSC), an autonomous, agent-agnostic, multi-surface harness optimization framework inspired by Stanford’s Meta-Harness and the Ralph Loop; evolved its Claude-Skill architecture across Adobe’s MAS stack (Halo, LIPI, Rules) to automate prompting guide-driven edits, iterative benchmarking, and reducing ~3 weeks of manual LLM model migration to an overnight run.<br>
-                - Deployed MHSC as a zero-overhead execution pipeline requiring only target endpoints and API keys to perform agent discovery, self-evaluation, and automated PR generation; MHSC reduced per-scenario token consumption by 12.33% in LIPI and 27.0% in Halo.<br>
+                - Designed a GEPA-inspired, feedback-based prompt optimization loop for the MAS LIPI agent, integrating deterministic evaluation gates and LLM-driven candidate generation, elevating the system pass rate from 76% to 87% across 628 test scenarios with zero runtime overhead.<br>
+                - Configured LLM telemetry via Langfuse and Jenkins CI/CD pipelines. Benchmarked GPT-5.2 against 5.4, 5.4-mini (low/med/high reasoning), 5.4-nano, GPT-5-mini, o3, 4o-mini, and o4-mini. Proved GPT-5.4-mini (low reasoning) achieved a 57.5% operational cost reduction over the 2.35x more expensive GPT-5.2 baseline while sustaining a 97.0% deterministic-set pass rate.<br>
+                - Developed Meta Harness Skill-Centric (MHSC), an autonomous, agent-agnostic, multi-surface harness optimization framework inspired by Stanford’s Meta-Harness and the Ralph Loop; evolved its Claude-Skill architecture across Adobe’s MAS stack (Halo, LIPI, Rules) to automate prompting guide-driven edits, iterative benchmarking, and reducing ~3 weeks of manual LLM model migration to an overnight run.<br>
+                - Implemented MHSC as a zero-overhead execution pipeline requiring only target endpoints and API keys to perform agent discovery, self-evaluation, and automated PR generation; MHSC reduced per-scenario token consumption by 12.33% in LIPI and 27.0% in Halo.<br>
               </p>
             </li>
 
@@ -645,8 +645,8 @@
               <span>Jun 2025 — Jul 2025</span>
               <p class="timeline-text">
                 <em>Technologies: Python, Pandas, NumPy, RapidFuzz, Scikit-learn, Node2Vec, Fuzzy C-Means, NLTK, FastAPI, Docker, Pytest</em><br>
-                - Architected a scalable, hybrid candidate-matching microservice utilizing Fuzzy C-Means, Node2Vec embeddings, and TF-IDF; slashed matrix generation from ~1hr to 9.79s while maintaining 83.6% Top-1 accuracy by integrating C++ RapidFuzz and resolving N-gram boundaries.<br>
-                - Engineered a fully vectorized NumPy scoring pipeline processing 200,000 multi-dimensional matches in 0.90s (>325,000 pairs/sec); hardened the system using O(1) disk-caching for near-zero latency warm boots and a secure, rootless Docker containerization pipeline.<br>
+                - Built a scalable, hybrid candidate-matching microservice utilizing Fuzzy C-Means, Node2Vec embeddings, and TF-IDF; slashed matrix generation from ~1hr to 9.79s while maintaining 83.6% Top-1 accuracy by integrating C++ RapidFuzz and resolving N-gram boundaries.<br>
+                - Implemented a fully vectorized NumPy scoring pipeline processing 200,000 multi-dimensional matches in 0.90s (>325,000 pairs/sec); hardened the system using O(1) disk-caching for near-zero latency warm boots and a secure, rootless Docker containerization pipeline.<br>
               </p>
             </li>
             <li class="timeline-item">
@@ -895,7 +895,7 @@
                 <p class="project-category">Machine Learning, Web Development, System Design</p>
                 <p class="project-description">
                   Technologies: Python, LlamaIndex, BM25, CrossEncoders, Groq API (LLaMA-4), Hugging Face, FastAPI, Node.js, Express, MongoDB <br><br>
-                  - Architected a Python RAG microservice, implementing a 2-stage hybrid retrieval pipeline (Dense + BM25) fused via Reciprocal Rank Fusion (RRF). Integrated a HuggingFace CrossEncoder to jointly score query-passage pairs, surfacing the top-3 most contextually relevant chunks.<br>
+                  - Built a Python RAG microservice, implementing a 2-stage hybrid retrieval pipeline (Dense + BM25) fused via Reciprocal Rank Fusion (RRF). Integrated a HuggingFace CrossEncoder to jointly score query-passage pairs, surfacing the top-3 most contextually relevant chunks.<br>
                   - Accelerated throughput by developing a cosine-similarity semantic caching layer over query embeddings, reducing response latency by 98.3% (from 3.55s to 60ms). Designed a deterministic 13-class intent router to bypass generative LLM inference for static interactions.<br>
                 </p>
               </a>
@@ -913,7 +913,7 @@
                 <p class="project-category">System Design</p>
                 <p class="project-description">
                   <strong>Technologies:</strong> C++, Drogon Web Framework, Domain-Driven Design (DDD), RESTful APIs, Atomics, Object Pool, Spatial Grid <br><br>
-                  - Architected a C++ backend utilizing 4-layer DDD with decoupled pricing and matching engines. Engineered a custom freelist Object Pool over contiguous aligned_storage_t, achieving 27ns allocation latency by bypassing kernel overhead for 1,000+ GPS telemetry events/sec.<br>
+                  - Designed a C++ backend utilizing 4-layer DDD with decoupled pricing and matching engines. Implemented a custom freelist Object Pool over contiguous aligned_storage_t, achieving 27ns allocation latency by bypassing kernel overhead for 1,000+ GPS telemetry events/sec.<br>
                   - Developed a high-performance Drogon REST API featuring a cache-friendly Spatial Grid that replaced linear O(n) scans with O(1) lookups, achieving 26µs matching latency (a 17.4x speedup) for 10,000 drivers. Integrated lock-free surge pricing, ensuring zero heap allocations.<br>
                 </p>
               </a>
@@ -932,7 +932,7 @@
                 <p class="project-description">
                   Technologies: Python, FastAPI, Redis, SQLite, Sentence-Transformers, NetworkX, Node2Vec, Ollama, vLLM <br><br>
                   - Created a zero-runtime-LLM gateway delivering exact-match and verifier-gated semantic caching, heuristic cascade routing, and shadow-mode policy staging, powered entirely by dense local embeddings, graph-based ANN retrieval, and zero-cost inference via Ollama & vLLM.<br>
-                  - Designed Trajectory-Based Prompt Enrichment with fail-closed safety gates against adversarial injection replay and cross-tenant data leakage; engineered a two-plane evaluation suite utilizing a CPU judge to statistically validate metrics via 95% bootstrap confidence intervals.<br>
+                  - Integrated Trajectory-Based Prompt Enrichment with fail-closed safety gates against adversarial injection replay and cross-tenant data leakage also deployed a two-plane evaluation suite utilizing a CPU judge to statistically validate metrics.<br>
                 </p>
               </a>
             </li>
@@ -949,8 +949,8 @@
                 <p class="project-category">Machine Learning, System Design</p>
                 <p class="project-description">
                   Technologies: Python, Pandas, NumPy, RapidFuzz, Scikit-learn, Node2Vec, Fuzzy C-Means, NLTK, FastAPI, Docker, Pytest <br><br> 
-                  - Architected a scalable, hybrid candidate-matching microservice utilizing Fuzzy C-Means, Node2Vec embeddings, and TF-IDF; slashed matrix generation from ~1hr to 9.79s while maintaining 83.6% Top-1 accuracy by integrating C++ RapidFuzz and resolving N-gram boundaries.<br>
-                  - Engineered a fully vectorized NumPy scoring pipeline processing 200,000 multi-dimensional matches in 0.90s (>325,000 pairs/sec); hardened the system using O(1) disk-caching for near-zero latency warm boots and a secure, rootless Docker containerization pipeline.<br>
+                  - Built a scalable, hybrid candidate-matching microservice utilizing Fuzzy C-Means, Node2Vec embeddings, and TF-IDF; slashed matrix generation from ~1hr to 9.79s while maintaining 83.6% Top-1 accuracy by integrating C++ RapidFuzz and resolving N-gram boundaries.<br>
+                  - Implemented a fully vectorized NumPy scoring pipeline processing 200,000 multi-dimensional matches in 0.90s (>325,000 pairs/sec); hardened the system using O(1) disk-caching for near-zero latency warm boots and a secure, rootless Docker containerization pipeline.<br>
                 </p>
               </a>
             </li>
