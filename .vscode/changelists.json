@@ -1,0 +1,13 @@
+{
+  "changelists": [
+    {
+      "name": "Default",
+      "files": [
+        ".vscode/changelists.json",
+        ".DS_Store",
+        "\"PranayPandey_Resume_Aug2026_aegisplus copy.pdf\""
+      ]
+    }
+  ],
+  "active": "Default"
+}
