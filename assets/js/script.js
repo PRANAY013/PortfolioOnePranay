@@ -32,31 +32,91 @@ const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
 
-// modal variable
-const modalImg = document.querySelector("[data-modal-img]");
+// modal variables
 const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
+const modalPreviewWrapper = document.querySelector("[data-modal-preview-wrapper]");
+const modalImgContainer = document.querySelector("[data-modal-img-container]");
+const modalExternalLink = document.querySelector("[data-modal-external-link]");
+const modalExternalWrapper = document.querySelector("[data-modal-external-wrapper]");
 
 // modal toggle function
 const testimonialsModalFunc = function () {
   modalContainer.classList.toggle("active");
   overlay.classList.toggle("active");
+  if (!modalContainer.classList.contains("active")) {
+    modalImgContainer.innerHTML = "";
+  }
+}
+
+// Function to populate and open modal
+const openModal = function (item) {
+  modalTitle.innerHTML = item.querySelector("[data-testimonials-title]").innerHTML;
+  modalText.innerHTML = item.querySelector("[data-testimonials-text]").innerHTML;
+  
+  modalImgContainer.innerHTML = ""; // clear previous
+  
+  // handle external link array
+  const externalLinkStr = item.dataset.externalLink || "";
+  const externalLinks = externalLinkStr ? externalLinkStr.split(",") : [];
+  
+  // Set the "Verify Certificate" fallback text to the first link
+  if (externalLinks.length > 0) {
+    modalExternalLink.href = externalLinks[0];
+    modalExternalWrapper.style.display = "block";
+  } else {
+    modalExternalLink.href = "#";
+    modalExternalWrapper.style.display = "none";
+  }
+
+  // handle image preview
+  const previewImgStr = item.dataset.previewImg;
+  if (previewImgStr) {
+    const images = previewImgStr.split(",");
+    
+    // adjust grid columns dynamically based on how many images there are
+    if (images.length === 1) {
+      modalImgContainer.style.gridTemplateColumns = "1fr";
+    } else {
+      // Create a nice side-by-side layout if multiple
+      modalImgContainer.style.gridTemplateColumns = "repeat(auto-fit, minmax(200px, 1fr))";
+    }
+    
+    images.forEach((src, index) => {
+      const a = document.createElement("a");
+      // Use corresponding link, or default to first if missing
+      a.href = externalLinks[index] || externalLinks[0] || "#"; 
+      if (a.href !== "#") a.target = "_blank";
+      a.style.display = "block";
+      
+      const img = document.createElement("img");
+      img.src = src.trim();
+      img.alt = "Certificate Preview";
+      img.style.width = "100%";
+      img.style.height = "auto";
+      img.style.display = "block";
+      img.style.borderRadius = "8px";
+      img.style.border = "1px solid var(--jet)";
+      img.style.backgroundColor = "#fff";
+      
+      a.appendChild(img);
+      modalImgContainer.appendChild(a);
+    });
+    
+    modalPreviewWrapper.style.display = "block";
+  } else {
+    modalPreviewWrapper.style.display = "none";
+  }
+
+  modalContainer.classList.add("active");
+  overlay.classList.add("active");
 }
 
 // add click event to all modal items
 for (let i = 0; i < testimonialsItem.length; i++) {
-
   testimonialsItem[i].addEventListener("click", function () {
-
-    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
-
-    testimonialsModalFunc();
-
+    openModal(this);
   });
-
 }
 
 // add click event to modal close button
@@ -240,72 +300,57 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  const track = document.querySelector('.testimonials-list');
+  const track = document.querySelector('[data-marquee]');
   if (!track) return;
 
-  // 1. Decoupled Memory Variables
-  let velocity = 0;
-  let exactScroll = track.scrollLeft; // Stores the true sub-pixel position
-  let isAnimating = false;
-  
-  // 2. Engine Tuning
-  const friction = 0.50; // 0.90 to 0.98. Higher = longer glide.
-  const multiplier = 0.25; // Sensitivity.
+  const originalItems = Array.from(track.children);
+  const clones = [];
 
-  // 3. The Execution Loop
-  function renderMomentum() {
-    if (Math.abs(velocity) < 0.1) {
-      velocity = 0;
-      isAnimating = false;
-      return;
-    }
-
-    // Calculate true position in memory
-    exactScroll += velocity;
-    velocity *= friction;
-
-    // Clamp absolute boundaries mathematically
-    const maxScroll = track.scrollWidth - track.clientWidth;
-    if (exactScroll <= 0) {
-      exactScroll = 0;
-      velocity = 0;
-    } else if (exactScroll >= maxScroll) {
-      exactScroll = maxScroll;
-      velocity = 0;
-    }
-
-    // Force DOM to sync
-    track.scrollLeft = exactScroll;
-
-    requestAnimationFrame(renderMomentum);
+  // Duplicate items multiple times for infinite scroll on wide screens
+  for (let i = 0; i < 3; i++) {
+    originalItems.forEach(item => {
+      const clone = item.cloneNode(true);
+      // re-attach event listeners to clones for the modal
+      const cloneCard = clone.querySelector("[data-testimonials-item]");
+      if (cloneCard) {
+        cloneCard.addEventListener("click", function () {
+          if (typeof openModal === 'function') {
+            openModal(this);
+          }
+        });
+      }
+      track.appendChild(clone);
+      if (i === 0) clones.push(clone); // Only need the first set of clones to calculate offset
+    });
   }
 
-  // 4. Input Interceptor
-  track.addEventListener('wheel', (e) => {
-    const maxScroll = track.scrollWidth - track.clientWidth;
+  let scrollPos = 0;
+  let isHovered = false;
 
-    // Yield control to vertical window scrolling at the absolute edges
-    if ((exactScroll <= 0 && e.deltaY < 0) || (exactScroll >= maxScroll && e.deltaY > 0)) {
-      return; 
+  track.addEventListener('mouseenter', () => isHovered = true);
+  track.addEventListener('mouseleave', () => isHovered = false);
+  
+  // also pause on touch
+  track.addEventListener('touchstart', () => isHovered = true);
+  track.addEventListener('touchend', () => isHovered = false);
+
+  function animate() {
+    if (!isHovered) {
+      scrollPos += 1; // Speed of the marquee
+      
+      // Calculate exact distance to the first clone
+      const firstCloneOffset = clones[0].offsetLeft - originalItems[0].offsetLeft;
+      
+      if (firstCloneOffset > 0 && scrollPos >= firstCloneOffset) {
+        scrollPos = scrollPos % firstCloneOffset;
+      }
+      track.scrollLeft = scrollPos;
+    } else {
+      // Sync scrollPos with current scrollLeft when user interacts
+      scrollPos = track.scrollLeft;
     }
+    requestAnimationFrame(animate);
+  }
 
-    e.preventDefault();
-
-    velocity += e.deltaY * multiplier;
-
-    if (!isAnimating) {
-      isAnimating = true;
-      // Resync starting position in case user manually dragged the trackpad
-      exactScroll = track.scrollLeft; 
-      requestAnimationFrame(renderMomentum);
-    }
-  }, { passive: false });
-
-  // 5. State Synchronization
-  // Keeps the memory variable accurate if the user uses native touch swiping
-  track.addEventListener('scroll', () => {
-    if (!isAnimating) {
-      exactScroll = track.scrollLeft;
-    }
-  }, { passive: true });
+  requestAnimationFrame(animate);
 });
