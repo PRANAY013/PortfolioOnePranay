@@ -3,16 +3,10 @@
     {
       "name": "Default",
       "files": [
-        "assets/css/style.css",
-        "assets/images/.DS_Store",
-        "assets/js/script.js",
+        "PranayPandey_Resume_Sep2026.pdf",
+        ".vscode/changelists.json",
         "index.html",
-        "assets/images/Certificate_DL_Specialization1.jpeg",
-        "assets/images/Certificate_DL_Specialization2.jpeg",
-        "assets/images/Certificate_DL_Specialization3.jpeg",
-        "assets/images/Certificate_GAN_Specialization.jpeg",
-        "assets/images/Certificate_ML_Specialization.jpeg",
-        "assets/images/img_leetcode_logo.jpeg"
+        "PranayPandey_Resume_Aug2026_aegisplus.pdf"
       ]
     }
   ],
