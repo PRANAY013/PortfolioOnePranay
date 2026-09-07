@@ -376,28 +376,24 @@ main {
   border-radius: 0 15px;
   font-size: 13px;
   color: var(--orange-yellow-crayola);
-  background: var(--border-gradient-onyx);
+  background: rgba(255, 255, 255, 0.05);
   padding: 10px;
-  box-shadow: var(--shadow-2);
-  transition: var(--transition-1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), inset 0 4px 20px rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
   z-index: 1;
 }
 
-.info_more-btn::before {
-  content: "";
-  position: absolute;
-  inset: 1px;
-  border-radius: inherit;
-  background: var(--bg-gradient-jet);
-  transition: var(--transition-1);
-  z-index: -1;
-}
+.info_more-btn::before { display: none; }
 
 .info_more-btn:hover,
-.info_more-btn:focus { background: var(--bg-gradient-yellow-1); }
+.info_more-btn:focus {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), inset 0 4px 25px rgba(255, 255, 255, 0.1);
+}
 
-.info_more-btn:hover::before,
-.info_more-btn:focus::before { background: var(--bg-gradient-yellow-2); }
+
 
 .info_more-btn span { display: none; }
 
@@ -567,8 +563,9 @@ main {
   box-shadow: var(--shadow-2);
 }
 .resume-download-btn:hover {
-  background: var(--border-gradient-onyx);
+  background: rgba(255, 255, 255, 0.1);
   transform: scale(1.035);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), inset 0 4px 25px rgba(255, 255, 255, 0.1);
 }
 .resume-download-btn ion-icon {
   font-size: 1.2em;
@@ -1289,45 +1286,45 @@ textarea.form-input::-webkit-resizer { display: none; }
 .form-btn {
   position: relative;
   width: 100%;
-  background: var(--border-gradient-onyx);
+  background: rgba(255, 255, 255, 0.05);
   color: var(--orange-yellow-crayola);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
   padding: 13px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 14px;
   font-size: var(--fs-6);
   text-transform: capitalize;
-  box-shadow: var(--shadow-3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), inset 0 4px 20px rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
   z-index: 1;
-  transition: var(--transition-1);
+  transition: all 0.3s ease;
 }
 
-.form-btn::before {
-  content: "";
-  position: absolute;
-  inset: 1px;
-  background: var(--bg-gradient-jet);
-  border-radius: inherit;
-  z-index: -1;
-  transition: var(--transition-1);
-}
+.form-btn::before { display: none; }
 
 .form-btn ion-icon { font-size: 16px; }
 
-.form-btn:hover { background: var(--bg-gradient-yellow-1); }
+.form-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), inset 0 4px 25px rgba(255, 255, 255, 0.1);
+}
 
-.form-btn:hover::before { background: var(--bg-gradient-yellow-2); }
+
 
 .form-btn:disabled {
   opacity: 0.7;
   cursor: not-allowed;
 }
 
-.form-btn:disabled:hover { background: var(--border-gradient-onyx); }
+.form-btn:disabled:hover {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: none;
+}
 
-.form-btn:disabled:hover::before { background: var(--bg-gradient-jet); }
+
 
 
 
