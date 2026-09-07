@@ -2039,3 +2039,31 @@ textarea.form-input::-webkit-resizer { display: none; }
   transform: scale(1.02);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), inset 0 4px 25px rgba(255, 255, 255, 0.1);
 }
+
+.resume-preview-actions {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.resume-action-btn {
+  width: auto;
+  padding: 10px 20px;
+  margin: 0;
+  font-size: var(--fs-6);
+}
+
+@media (max-width: 580px) {
+  .resume-preview-actions {
+    justify-content: center;
+    gap: 10px;
+  }
+  .resume-action-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+}
