@@ -134,7 +134,13 @@ input, textarea {
 
 html { font-family: var(--ff-poppins); }
 
-body { background: var(--smoky-black); }
+body {
+  background-color: var(--smoky-black);
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(255, 215, 0, 0.04), transparent 40%),
+    radial-gradient(circle at 85% 30%, rgba(255, 255, 255, 0.03), transparent 40%);
+  background-attachment: fixed;
+}
 
 
 
@@ -146,11 +152,13 @@ body { background: var(--smoky-black); }
 
 .sidebar,
 article {
-  background: var(--eerie-black-2);
-  border: 1px solid var(--jet);
-  border-radius: 20px;
+  background: rgba(30, 30, 35, 0.65);
+  backdrop-filter: blur(25px) saturate(120%);
+  -webkit-backdrop-filter: blur(25px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
   padding: 15px;
-  box-shadow: var(--shadow-1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0px rgba(255, 255, 255, 0.1);
   z-index: 1;
   transition: var(--transition-2);
 }
@@ -467,14 +475,20 @@ main {
 
 .navbar {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: hsla(240, 1%, 17%, 0.75);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--jet);
-  border-radius: 12px 12px 0 0;
-  box-shadow: var(--shadow-2);
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  background: rgba(40, 40, 45, 0.45);
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.5), 
+    inset 0 1px 1px rgba(255, 255, 255, 0.25),
+    -1px 0 2px rgba(255, 0, 0, 0.15), 
+    1px 0 2px rgba(0, 255, 255, 0.15);
   z-index: 5;
 }
 
@@ -483,20 +497,25 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 0 10px;
+  padding: 5px;
 }
 
 .navbar-link {
   color: var(--light-gray);
   font-size: var(--fs-8);
-  padding: 20px 7px;
-  transition: color var(--transition-1);
+  padding: 12px 18px;
+  border-radius: 20px;
+  transition: all var(--transition-1);
 }
 
 .navbar-link:hover,
 .navbar-link:focus { color: var(--light-gray-70); }
 
-.navbar-link.active { color: var(--orange-yellow-crayola); }
+.navbar-link.active { 
+  color: var(--orange-yellow-crayola); 
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
 
 
 
@@ -1767,13 +1786,18 @@ textarea.form-input::-webkit-resizer { display: none; }
   .navbar {
     position: absolute;
     bottom: auto;
-    top: 0;
+    top: 20px;
     left: auto;
-    right: 0;
+    right: 20px;
+    transform: none;
     width: max-content;
-    border-radius: 0 20px;
-    padding: 0 20px;
-    box-shadow: none;
+    border-radius: 24px;
+    padding: 0 10px;
+    box-shadow: 
+      0 10px 30px rgba(0, 0, 0, 0.5), 
+      inset 0 1px 1px rgba(255, 255, 255, 0.25),
+      -1px 0 2px rgba(255, 0, 0, 0.15), 
+      1px 0 2px rgba(0, 255, 255, 0.15);
   }
 
   .navbar-list {
