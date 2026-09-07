@@ -218,6 +218,8 @@ for (let i = 0; i < navigationLinks.length; i++) {
         pages[i].classList.add("active");
         navigationLinks[i].classList.add("active");
         window.scrollTo(0, 0);
+        // Dispatch resize to trigger indicator recalculation for newly visible elements
+        setTimeout(() => window.dispatchEvent(new Event('resize')), 10);
       } else {
         pages[i].classList.remove("active");
         navigationLinks[i].classList.remove("active");
