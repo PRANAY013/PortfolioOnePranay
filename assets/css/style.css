@@ -1705,6 +1705,8 @@ textarea.form-input::-webkit-resizer { display: none; }
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 24px;
     width: max-content;
+    max-width: 100%;
+    flex-wrap: wrap;
   }
 
   .filter-item button {
