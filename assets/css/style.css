@@ -537,20 +537,19 @@ main {
   align-items: center;
   gap: 0.5em;
   padding: 0.5em 1em;
-  background: var(--smoky-black);
+  background: rgba(255, 255, 255, 0.05);
   color: var(--orange-yellow-crayola);
   border-radius: 16px;
-  border-color : var(--orange-yellow-crayola);
-  border-style: solid;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   text-decoration: none;
   font-weight: 500;
   font-size: 18px;
-  transition: background 0.2s, transform 0.2s ease;
-  }
+  transition: all 0.3s ease;
+}
 .resume-download-btn:hover {
   background: rgba(255, 255, 255, 0.1);
   transform: scale(1.035);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), inset 0 4px 25px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), inset 0 4px 20px rgba(255, 255, 255, 0.1);
 }
 .resume-download-btn ion-icon {
   font-size: 1.2em;
@@ -2025,4 +2024,18 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 .mapbox:hover {
   cursor: auto !important;
+}
+.resume-download-btn:active,
+.form-btn:active,
+.info_more-btn:active {
+  transform: scale(0.98);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.project-item:hover,
+.blog-post-item > a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: scale(1.02);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), inset 0 4px 25px rgba(255, 255, 255, 0.1);
 }
