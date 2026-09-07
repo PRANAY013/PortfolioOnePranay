@@ -354,3 +354,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
   requestAnimationFrame(animate);
 });
+// Sliding Indicator Logic for Navbar and Filter List
+function initSlidingIndicator(listSelector, itemSelector) {
+  const list = document.querySelector(listSelector);
+  if (!list) return;
+
+  // Add the indicator element if not present
+  let indicator = list.querySelector('.sliding-indicator');
+  if (!indicator) {
+    indicator = document.createElement('div');
+    indicator.className = 'sliding-indicator';
+    list.appendChild(indicator);
+  }
+
+  function updateIndicator(targetItem) {
+    if (!targetItem) return;
+    indicator.style.width = `${targetItem.offsetWidth}px`;
+    indicator.style.height = `${targetItem.offsetHeight}px`;
+    indicator.style.left = `${targetItem.offsetLeft}px`;
+    indicator.style.top = `${targetItem.offsetTop}px`;
+  }
+
+  // Update on initialization
+  const activeItem = list.querySelector(itemSelector + '.active');
+  if (activeItem) {
+    // Wait a tick for styles to settle
+    setTimeout(() => updateIndicator(activeItem), 50);
+  }
+
+  // Attach click listeners to update the indicator
+  const items = list.querySelectorAll(itemSelector);
+  items.forEach(item => {
+    item.addEventListener('click', function() {
+      // Set a short timeout so .active class is applied first by other listeners
+      setTimeout(() => updateIndicator(this), 10);
+    });
+  });
+
+  // Re-adjust on window resize
+  window.addEventListener('resize', () => {
+    const currentActive = list.querySelector(itemSelector + '.active');
+    updateIndicator(currentActive);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initSlidingIndicator('.navbar-list', '.navbar-link');
+  initSlidingIndicator('.filter-list', '.filter-item button');
+});
