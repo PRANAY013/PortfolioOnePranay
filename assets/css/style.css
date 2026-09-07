@@ -183,7 +183,6 @@ article {
   color: var(--orange-yellow-crayola);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 4px 25px rgba(255, 255, 255, 0.1), 0 4px 10px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(5px);
   z-index: 1;
 }
 
@@ -267,7 +266,7 @@ article.active {
   cursor: pointer;
   z-index: 1;
   transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
+  
 }
 
 .content-card:hover {
@@ -380,7 +379,7 @@ main {
   padding: 10px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), inset 0 4px 20px rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  
   transition: all 0.3s ease;
   z-index: 1;
 }
@@ -594,7 +593,7 @@ main {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), inset 0 4px 20px rgba(255, 255, 255, 0.05);
   z-index: 1;
   transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
+  
 }
 
 .service-item:hover {
@@ -1298,7 +1297,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   font-size: var(--fs-6);
   text-transform: capitalize;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), inset 0 4px 20px rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  
   z-index: 1;
   transition: all 0.3s ease;
 }
@@ -2010,32 +2009,32 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 /* Custom bouncy cursor */
-.bouncy-cursor-dot, .bouncy-cursor-trail {
+.bouncy-cursor-dot {
   position: fixed;
   pointer-events: none;
   z-index: 2147483647;
   border-radius: 50%;
   transition: opacity 0.25s ease, display 0.25s ease, background 0.125s;
-  mix-blend-mode: difference;
-  opacity: 1 ;
-}
-
-.bouncy-cursor-dot {
-  width: 15px;
-  height: 15px;
+  opacity: 1;
+  width: 10px;
+  height: 10px;
   background: var(--orange-yellow-crayola);
-  box-shadow: 0 0 10px 2px var(--orange-yellow-crayola);
+  box-shadow: 0 0 10px 1px var(--orange-yellow-crayola);
   transform: translate(-50%, -50%);
 }
 
 .bouncy-cursor-trail {
-  width: 32px;
-  height: 32px;
+  position: fixed;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 50%;
+  transition: opacity 0.25s ease, display 0.25s ease, background 0.125s;
+  opacity: 0.3;
+  width: 150px;
+  height: 150px;
   background: var(--orange-yellow-crayola);
-  opacity: 0.125;
-  filter: blur(6px);
+  filter: blur(40px);
   transform: translate(-50%, -50%);
-  transition: opacity 0.125s;
 }
 
 @media (max-width: 1250px) {
