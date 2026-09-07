@@ -123,6 +123,32 @@ for (let i = 0; i < testimonialsItem.length; i++) {
 modalCloseBtn.addEventListener("click", testimonialsModalFunc);
 overlay.addEventListener("click", testimonialsModalFunc);
 
+// Resume modal variables
+const resumeBtn = document.querySelector("[data-resume-btn]");
+const resumeModalContainer = document.querySelector("[data-resume-modal-container]");
+const resumeModalCloseBtn = document.querySelector("[data-resume-modal-close-btn]");
+const resumeOverlay = document.querySelector("[data-resume-overlay]");
+
+// resume modal toggle function
+const resumeModalFunc = function () {
+  resumeModalContainer.classList.toggle("active");
+  resumeOverlay.classList.toggle("active");
+}
+
+if (resumeBtn) {
+  resumeBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    resumeModalFunc();
+  });
+}
+
+if (resumeModalCloseBtn) {
+  resumeModalCloseBtn.addEventListener("click", resumeModalFunc);
+}
+
+if (resumeOverlay) {
+  resumeOverlay.addEventListener("click", resumeModalFunc);
+}
 
 
 // custom select variables
