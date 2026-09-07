@@ -1950,6 +1950,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   .info-content .title { margin: auto; }
 
   .info_more-btn { display: none; }
+  .mobile-only-resume-btn { display: none; }
 
   .sidebar-info_more {
     opacity: 1;
@@ -2075,4 +2076,13 @@ textarea.form-input::-webkit-resizer { display: none; }
   background: rgba(255, 255, 255, 0.05);
   border-color: rgba(255, 255, 255, 0.15);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), inset 0 4px 25px rgba(255, 255, 255, 0.1);
+}
+
+.project-short-summary {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  opacity: 0.8;
+  margin: 15px 10px;
+  line-height: 1.6;
 }
