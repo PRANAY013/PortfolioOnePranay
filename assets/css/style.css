@@ -253,21 +253,20 @@ article.active {
 
 .content-card {
   position: relative;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.05);
   padding: 15px;
-  border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   cursor: pointer;
   z-index: 1;
   transition: all 0.3s ease;
-  
 }
 
 .content-card:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.1);
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), inset 0 4px 30px rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: scale(1.02);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), inset 0 4px 25px rgba(255, 255, 255, 0.1);
 }
 
 .content-card::before {
@@ -571,20 +570,19 @@ main {
 
 .service-item {
   position: relative;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.05);
   padding: 20px;
-  border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 1;
   transition: all 0.3s ease;
-  
 }
 
 .service-item:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
   transform: scale(1.02);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), inset 0 4px 30px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), inset 0 4px 25px rgba(255, 255, 255, 0.1);
 }
 
 .service-item::before {
@@ -853,7 +851,13 @@ main {
   margin-left: 45px;
 }
 
-.timeline-item { position: relative; }
+.timeline-item { position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
 
 .timeline-item:not(:last-child) { margin-bottom: 20px; }
 
@@ -875,14 +879,14 @@ main {
   top: -25px;
   left: -30px;
   width: 1px;
-  height: calc(100% + 50px);
+  height: calc(100% + 70px);
   background: rgba(255, 255, 255, 0.1);
 }
 
 .timeline-item::after {
   content: "";
   position: absolute;
-  top: 5px;
+  top: 25px;
   left: -33px;
   height: 6px;
   width: 6px;
@@ -2066,4 +2070,11 @@ textarea.form-input::-webkit-resizer { display: none; }
     flex: 1 1 auto;
     justify-content: center;
   }
+}
+
+.timeline-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: scale(1.02);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), inset 0 4px 25px rgba(255, 255, 255, 0.1);
 }
