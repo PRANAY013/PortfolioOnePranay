@@ -3,7 +3,23 @@
     {
       "name": "Default",
       "files": [
-        "PranayPandey_Resume_Sep2026.pdf"
+        "assets/js/script.js",
+        "fix_media.py",
+        "patch_all_carefully.py",
+        "patch_blog_item.py",
+        "patch_buttons.py",
+        "patch_hover.py",
+        "patch_project_item.py",
+        "patch_testimonials.py",
+        "patch_timeline.py",
+        "strip_aberration.py",
+        "strip_dormant_shadows.py",
+        "strip_halos.py",
+        ".vscode/changelists.json",
+        "index.txt",
+        "fix_tablet_navbar.py",
+        "patch_filter_list.py",
+        "patch_web_dev.py"
       ]
     }
   ],

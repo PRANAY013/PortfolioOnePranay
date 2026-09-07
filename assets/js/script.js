@@ -232,7 +232,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
 // Bouncy Cursor with Inertial Trail
 (function() {
-  if (window.innerWidth > 1250) {
+  if (window.innerWidth > 1320) {
     document.body.style.cursor = 'none';
 
     const dot = document.createElement('div');
