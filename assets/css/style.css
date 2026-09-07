@@ -733,10 +733,6 @@ main {
   padding: 15px;
   margin: 15px 12px;
   border-radius: 14px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
   opacity: 0;
   transform: scale(1.2);
   transition: var(--transition-1);

@@ -404,3 +404,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initSlidingIndicator('.navbar-list', '.navbar-link');
   initSlidingIndicator('.filter-list', '.filter-item button');
 });
+
+// close modal on escape key
+document.addEventListener("keydown", function(e) {
+  if (e.key === "Escape" && modalContainer.classList.contains("active")) {
+    testimonialsModalFunc();
+  }
+});
