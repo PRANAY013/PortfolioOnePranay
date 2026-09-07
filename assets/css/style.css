@@ -152,6 +152,7 @@ body {
 
 .sidebar,
 article {
+  position: relative;
   background: rgba(30, 30, 35, 0.25);
   backdrop-filter: blur(30px) saturate(130%);
   -webkit-backdrop-filter: blur(30px) saturate(130%);
@@ -2030,10 +2031,10 @@ textarea.form-input::-webkit-resizer { display: none; }
   border-radius: 50%;
   transition: opacity 0.25s ease, display 0.25s ease, background 0.125s;
   opacity: 0.3;
-  width: 150px;
-  height: 150px;
+  width: 80px;
+  height: 80px;
   background: var(--orange-yellow-crayola);
-  filter: blur(40px);
+  filter: blur(20px);
   transform: translate(-50%, -50%);
 }
 
