@@ -61,9 +61,14 @@ const openModal = function (item) {
   const externalLinks = externalLinkStr ? externalLinkStr.split(",") : [];
   
   // Set the "Verify Certificate" fallback text to the first link
-  if (externalLinks.length > 0) {
+    if (externalLinks.length > 0) {
     modalExternalLink.href = externalLinks[0];
     modalExternalWrapper.style.display = "block";
+    if (item.dataset.modalType === "project") {
+      modalExternalLink.innerHTML = "View Source Code ↗";
+    } else {
+      modalExternalLink.innerHTML = "Verify Certificate ↗";
+    }
   } else {
     modalExternalLink.href = "#";
     modalExternalWrapper.style.display = "none";
