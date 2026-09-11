@@ -3,8 +3,8 @@
     {
       "name": "Default",
       "files": [
-        ".vscode/changelists.json",
-        "index.html"
+        "assets/images/4.webp",
+        "assets/images/12345.webp"
       ]
     }
   ],
