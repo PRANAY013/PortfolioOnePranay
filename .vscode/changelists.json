@@ -3,7 +3,10 @@
     {
       "name": "Default",
       "files": [
-        "PranayPandey_Resume_Sep2026_offcam.pdf"
+        "PranayPandey_Resume_Oct2026_OCam.pdf",
+        ".vscode/changelists.json",
+        "index.html",
+        "PranayPandey_Resume_Sep2026.pdf"
       ]
     }
   ],
